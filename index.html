@@ -382,40 +382,45 @@
       </div>
     </div>
 
-    <!-- Dance copy -->
-    <div class="beyond__dance">
-      <h3 class="beyond__dance-label mono">Currently</h3>
-      <p class="beyond__dance-text">
-        I train in <strong>aerial arts</strong> and <strong>hip hop dance</strong>, two disciplines
-        that demand body awareness, creative expression, and the courage to try things that will
-        not work the first time. Both have made me a better engineer: more patient, more creative,
-        and more committed to the process over the outcome.
-    </p>
-    <div class="beyond__media-grid">
-      <!-- Slot 3: Aerial or dance photo -->
-        <div class="media-slot">
-          <img
-            src="your-photo-3.jpg"
-            alt="Aerial dance performance"
-            loading="lazy"
-          />
-          <span class="media-slot__caption mono">Aerial Arts</span>
-        </div>
+    <!-- Dance Section -->
+<div class="beyond__dance">
+  <h3 class="beyond__dance-label mono">Currently</h3>
+  <p class="beyond__dance-text">
+    I train in <strong>aerial arts</strong> and <strong>hip hop dance</strong>, two disciplines
+    that demand body awareness, creative expression, and the courage to try things that will
+    not work the first time. Both have made me a better engineer: more patient, more creative,
+    and more committed to the process over the outcome.
+  </p>
 
-        <!-- Slot 4: VIDEO — replace poster and src with your files -->
-        <div class="media-slot media-slot--video">
-          <video
-            controls
-            poster="your-video-poster.jpg"
-            preload="none"
-            aria-label="Dance performance reel"
-          >
-            <source src="your-video.mp4" type="video/mp4" />
-            Your browser does not support HTML5 video.
-          </video>
-          <span class="media-slot__caption mono">Hip Hop / Aerial Reel</span>
-        </div>
+  <!-- Moved Slot 3 & Slot 4 HERE -->
+  <div class="beyond__media-grid">
+
+    <!-- Slot 3: Aerial or dance photo -->
+    <div class="media-slot">
+      <img
+        src="your-photo-3.jpg"
+        alt="Aerial dance performance"
+        loading="lazy"
+      />
+      <span class="media-slot__caption mono">Aerial Arts</span>
     </div>
+
+    <!-- Slot 4: Video -->
+    <div class="media-slot media-slot--video">
+      <video
+        controls
+        poster="your-video-poster.jpg"
+        preload="none"
+        aria-label="Dance performance reel"
+      >
+        <source src="your-video.mp4" type="video/mp4" />
+        Your browser does not support HTML5 video.
+      </video>
+      <span class="media-slot__caption mono">Hip Hop / Aerial Reel</span>
+    </div>
+
+  </div>
+</div>
 
     <!-- Community cards -->
     <div class="beyond__community">
