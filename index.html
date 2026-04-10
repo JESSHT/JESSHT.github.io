@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — Android Developer & Product Thinker</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Fonts: DM Serif Display (editorial serif) + DM Mono (technical labels) + Lato (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ============================================================
+       NAV — sticky, minimal, anchors only
+  ============================================================ -->
+  <nav class="nav" id="nav">
+    <div class="nav__logo">
+      <span class="nav__mono">// portfolio</span>
+    </div>
+    <ul class="nav__links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#beyond">Beyond the Code</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact" class="nav__cta">Contact</a></li>
+    </ul>
+    <button class="nav__burger" aria-label="Toggle menu" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile drawer -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about" onclick="toggleMenu()">About</a></li>
+      <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+      <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+      <li><a href="#beyond" onclick="toggleMenu()">Beyond the Code</a></li>
+      <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+      <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+    </ul>
+  </div>
+
+
+  <!-- ============================================================
+       HERO — name, title, positioning statement, CTA
+  ============================================================ -->
+  <section class="hero" id="hero">
+    <!-- Subtle decorative grid lines (CSS only) -->
+    <div class="hero__grid-lines" aria-hidden="true">
+      <span></span><span></span><span></span><span></span>
+    </div>
+
+    <div class="hero__content">
+      <p class="hero__eyebrow mono">Android Developer · Product Thinker · Data Analyst</p>
+
+      <h1 class="hero__name">
+        Building software<br />
+        <em>people actually use.</em>
+      </h1>
+
+      <p class="hero__statement">
+        I ship mobile features that move metrics, then dig into the data to understand why.
+        My work sits at the intersection of clean code, user behavior, and business strategy.
+      </p>
+
+      <div class="hero__actions">
+        <a href="#projects" class="btn btn--primary">See My Work</a>
+        <a href="#contact" class="btn btn--ghost">Get In Touch</a>
+      </div>
+
+      <!-- Impact stat bar -->
+      <div class="hero__stats">
+        <div class="stat">
+          <span class="stat__number">261%</span>
+          <span class="stat__label">User engagement lift</span>
+        </div>
+        <div class="stat__divider" aria-hidden="true"></div>
+        <div class="stat">
+          <span class="stat__number">50+</span>
+          <span class="stat__label">Tickets shipped</span>
+        </div>
+        <div class="stat__divider" aria-hidden="true"></div>
+        <div class="stat">
+          <span class="stat__number">94.6%</span>
+          <span class="stat__label">Crash-free sessions</span>
+        </div>
+        <div class="stat__divider" aria-hidden="true"></div>
+        <div class="stat">
+          <span class="stat__number">10+</span>
+          <span class="stat__label">Production releases</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__tag mono" aria-hidden="true">01 / INTRO</div>
+  </section>
+
+
+  <!-- ============================================================
+       ABOUT — strategic, impact-forward summary
+  ============================================================ -->
+  <section class="section about" id="about">
+    <div class="section__label mono">02 / ABOUT</div>
+
+    <div class="about__grid">
+      <!-- Left: sticky heading -->
+      <div class="about__heading">
+        <h2>
+          Engineer by training.<br />
+          <em>Product thinker</em><br />
+          by instinct.
+        </h2>
+      </div>
+
+      <!-- Right: bio copy -->
+      <div class="about__copy">
+        <p>
+          I'm an Android developer with a Computer Science degree and a growing obsession with
+          <strong>why</strong> users do what they do. Over the past year I've shipped features
+          that drove a 261% increase in user engagement, maintained 94.6% crash-free sessions
+          across 10+ production releases, and led my team's international expansion into Canada,
+          Mexico, and Latin America.
+        </p>
+        <p>
+          Beyond writing Kotlin, I've built SQL pipelines to answer real business questions,
+          designed self-updating analytics dashboards, and used Firebase to track 24,000+ monthly
+          user interactions, turning behavioral data into engineering decisions.
+        </p>
+        <p>
+          I'm intentionally expanding toward <strong>product management and data analysis</strong>
+          not because I want to stop building, but because I want to build the <em>right things</em>.
+          I bring both the technical depth to own implementation and the strategic curiosity to ask
+          what we should be building next.
+        </p>
+        <p>
+          I also serve as <strong>Programming Co-Lead for Women in IT</strong> and am an active
+          member of the <strong>African American Network</strong>. Representation and community
+          are not afterthoughts for me. They are part of the job.
+        </p>
+
+        <!-- Quick facts — clean tags, no emojis -->
+        <ul class="about__facts mono">
+          <li>Northeast Ohio</li>
+          <li>B.S. Computer Science, 2024</li>
+          <li>Android · React Native</li>
+          <li>Firebase · BigQuery · SQL</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SKILLS — grouped: technical / analytical / product
+  ============================================================ -->
+  <section class="section skills" id="skills">
+    <div class="section__label mono">03 / SKILLS</div>
+    <h2 class="section__heading">What I bring<br /><em>to the table.</em></h2>
+
+    <div class="skills__grid">
+
+      <div class="skill-group">
+        <h3 class="skill-group__title mono">Engineering</h3>
+        <ul class="skill-group__list">
+          <li>Kotlin &amp; Android Studio</li>
+          <li>Jetpack Compose</li>
+          <li>React Native</li>
+          <li>JavaScript</li>
+          <li>REST APIs &amp; Web Services</li>
+          <li>CI/CD via Bitrise</li>
+          <li>Git &amp; Version Control</li>
+          <li>Secure Coding Standards</li>
+        </ul>
+      </div>
+
+      <!-- Middle card — highlighted with accent color -->
+      <div class="skill-group skill-group--accent">
+        <h3 class="skill-group__title mono">Data &amp; Analytics</h3>
+        <ul class="skill-group__list">
+          <li>Firebase Analytics</li>
+          <li>Google BigQuery &amp; SQL</li>
+          <li>Excel Dashboards &amp; VBA</li>
+          <li>Access Database Design</li>
+          <li>LaunchDarkly (Feature Flags)</li>
+          <li>Postman &amp; API Testing</li>
+          <li>Risk-Score Normalization</li>
+          <li>Event &amp; Funnel Tracking</li>
+        </ul>
+      </div>
+
+      <div class="skill-group">
+        <h3 class="skill-group__title mono">Product &amp; Process</h3>
+        <ul class="skill-group__list">
+          <li>Agile / Sprint Planning</li>
+          <li>Jira &amp; Planview</li>
+          <li>Zeplin (Design Handoff)</li>
+          <li>Localization Strategy</li>
+          <li>Cross-Functional Collaboration</li>
+          <li>Stakeholder Demos &amp; Comms</li>
+          <li>QA &amp; Regression Testing</li>
+          <li>Unit &amp; Automated Testing</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       PROJECTS — Problem → Action → Impact format
+  ============================================================ -->
+  <section class="section projects" id="projects">
+    <div class="section__label mono">04 / PROJECTS</div>
+    <h2 class="section__heading">Selected<br /><em>work.</em></h2>
+
+    <div class="projects__list">
+
+      <article class="project-card">
+        <div class="project-card__meta">
+          <span class="project-card__number mono">01</span>
+          <span class="project-card__tag mono">Data Analysis · SQL · Healthcare</span>
+        </div>
+        <h3 class="project-card__title">Medical Insurance Health Plan Strategy 2026</h3>
+        <div class="project-card__pia">
+          <div class="pia-block">
+            <span class="pia-block__label mono">Problem</span>
+            <p>Health plan selection for diabetic and hypertensive populations involved comparing plans across 5 regions with no normalized cost or risk framework, leaving decision-makers without reliable data.</p>
+          </div>
+          <div class="pia-block">
+            <span class="pia-block__label mono">Action</span>
+            <p>Built a 6-step Google BigQuery SQL pipeline applying risk-score normalization for fair cross-plan comparison. Automated reporting with a VBA-driven Access database and self-updating Excel dashboard with region filtering and printable outputs.</p>
+          </div>
+          <div class="pia-block pia-block--impact">
+            <span class="pia-block__label mono">Impact</span>
+            <p>Surfaced Silver-tier plans as the consistent top performer across all conditions and geographies, giving stakeholders a data-backed, defensible framework for 2026 plan strategy decisions.</p>
+          </div>
+        </div>
+        <div class="project-card__stack mono">BigQuery · SQL · Excel VBA · MS Access · Risk Normalization</div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-card__meta">
+          <span class="project-card__number mono">02</span>
+          <span class="project-card__tag mono">Android · Localization · International</span>
+        </div>
+        <h3 class="project-card__title">Android App International Expansion — Canada, Mexico &amp; LATAM</h3>
+        <div class="project-card__pia">
+          <div class="pia-block">
+            <span class="pia-block__label mono">Problem</span>
+            <p>The Android app had no multilingual support framework. Expanding to Canada, Mexico, and Latin American markets required correct localized experiences without a scalable system in place.</p>
+          </div>
+          <div class="pia-block">
+            <span class="pia-block__label mono">Action</span>
+            <p>Led full French language delivery for the Canadian launch. Designed a lite localization strategy for Mexican Spanish, Portuguese, and additional Spanish-speaking regions. Became the team's source-of-truth for translations across all languages and platforms.</p>
+          </div>
+          <div class="pia-block pia-block--impact">
+            <span class="pia-block__label mono">Impact</span>
+            <p>Enabled smooth multi-region deployments with zero localization-related production incidents, expanding the app's addressable market to millions of new users across 3+ countries.</p>
+          </div>
+        </div>
+        <div class="project-card__stack mono">Kotlin · Android Studio · Localization · LaunchDarkly · Firebase</div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-card__meta">
+          <span class="project-card__number mono">03</span>
+          <span class="project-card__tag mono">Full-Stack · Front-End · Web App</span>
+        </div>
+        <h3 class="project-card__title">Healthy Digital Habits — Interactive Web Module &amp; Dashboard</h3>
+        <div class="project-card__pia">
+          <div class="pia-block">
+            <span class="pia-block__label mono">Problem</span>
+            <p>A public health initiative needed an engaging, cross-device web experience with no existing codebase, unclear requirements, and a stakeholder-driven delivery timeline.</p>
+          </div>
+          <div class="pia-block">
+            <span class="pia-block__label mono">Action</span>
+            <p>Built the full front-end with a 5-person team using HTML, CSS, and JavaScript. Debugged 100+ GitHub issues and achieved 90%+ cross-device compatibility. Delivered 3 live demos to project sponsors via React.js through Agile sprints.</p>
+          </div>
+          <div class="pia-block pia-block--impact">
+            <span class="pia-block__label mono">Impact</span>
+            <p>Delivered a polished, accessible web application on time with sponsor approval, demonstrating the ability to manage ambiguity, lead technical demos, and coordinate cross-functional delivery.</p>
+          </div>
+        </div>
+        <div class="project-card__stack mono">HTML · CSS · JavaScript · React.js · GitHub · Agile</div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-card__meta">
+          <span class="project-card__number mono">04</span>
+          <span class="project-card__tag mono">Hackathon · Data Dashboard · Cross-Functional</span>
+        </div>
+        <h3 class="project-card__title">2025 Internal Hackathon — Live Operations Dashboard</h3>
+        <div class="project-card__pia">
+          <div class="pia-block">
+            <span class="pia-block__label mono">Problem</span>
+            <p>Operational teams lacked a real-time view of document processing performance. Data existed but was not surfaced in a usable format for decision-makers.</p>
+          </div>
+          <div class="pia-block">
+            <span class="pia-block__label mono">Action</span>
+            <p>Led a cross-functional Hackathon team by defining roles, building structured timelines, and facilitating brainstorming sessions. Designed and built a fully functional dashboard processing live operational data.</p>
+          </div>
+          <div class="pia-block pia-block--impact">
+            <span class="pia-block__label mono">Impact</span>
+            <p>Delivered a working product under hackathon constraints with real-world business impact, demonstrating leadership, rapid prototyping, and the ability to translate operational data into usable interfaces.</p>
+          </div>
+        </div>
+        <div class="project-card__stack mono">React · Data Visualization · Leadership · Cross-Functional</div>
+      </article>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       BEYOND THE CODE — Athlete + Dance + Community
+       PHOTO INSTRUCTIONS:
+         - Place your image files in the same folder as index.html
+         - Replace "your-photo-1.jpg", "your-photo-2.jpg", "your-photo-3.jpg"
+           with your actual file names (e.g., "hurdles-action.jpg")
+         - For the video: replace "your-video-poster.jpg" (thumbnail image)
+           and "your-video.mp4" (the video file itself)
+  ============================================================ -->
+  <section class="section beyond" id="beyond">
+    <div class="section__label mono">05 / BEYOND THE CODE</div>
+
+    <div class="beyond__intro">
+      <h2 class="section__heading">The full<br /><em>picture.</em></h2>
+      <p class="beyond__sub">
+        Discipline, performance, and community have shaped how I work just as much as any IDE.
+        I bring that same competitive drive and team-first mindset into every sprint, every demo,
+        and every role I take on.
+      </p>
+    </div>
+
+    <!-- Athlete block: text + photo grid -->
+    <div class="beyond__athlete">
+
+      <div class="beyond__athlete-text">
+        <h3 class="beyond__athlete-heading">
+          Collegiate Champion.<br /><em>Track &amp; Field.</em>
+        </h3>
+        <p>
+          I competed as a collegiate track and field athlete, specializing in the
+          <strong>100m hurdles</strong> and <strong>4x400m relay</strong>, earning championship
+          titles in both events. The hurdles demand split-second decision-making, perfect form
+          under pressure, and the ability to recover mid-race without losing stride. The relay
+          demands trust, timing, and accountability to four people counting on you.
+        </p>
+        <p>
+          That same mentality is how I approach sprint cycles, incident response, and cross-team
+          delivery. I know how to compete at a high level and how to bring others along.
+        </p>
+        <div class="beyond__badges">
+          <span class="badge badge--blue">100m Hurdles Champion</span>
+          <span class="badge badge--pink">4x400m Relay Champion</span>
+        </div>
+      </div>
+
+      <!-- 
+        PHOTO GRID — 4 slots
+        Slot 1, 2, 3: still images (track/hurdles, relay, aerial dance)
+        Slot 4: video with thumbnail poster (hip hop or aerial reel)
+        Replace file names below with your actual files.
+      -->
+      <div class="beyond__media-grid">
+
+        <!-- Slot 1: Hurdles photo -->
+        <div class="media-slot">
+          <img
+            src="your-photo-1.jpg"
+            alt="Competing in the 100m hurdles"
+            loading="lazy"
+          />
+          <span class="media-slot__caption mono">100m Hurdles</span>
+        </div>
+
+        <!-- Slot 2: Relay photo -->
+        <div class="media-slot">
+          <img
+            src="your-photo-2.jpg"
+            alt="4x400m relay team"
+            loading="lazy"
+          />
+          <span class="media-slot__caption mono">4x400 Relay</span>
+        </div>
+
+        <!-- Slot 3: Aerial or dance photo -->
+        <div class="media-slot">
+          <img
+            src="your-photo-3.jpg"
+            alt="Aerial dance performance"
+            loading="lazy"
+          />
+          <span class="media-slot__caption mono">Aerial Arts</span>
+        </div>
+
+        <!-- Slot 4: VIDEO — replace poster and src with your files -->
+        <div class="media-slot media-slot--video">
+          <video
+            controls
+            poster="your-video-poster.jpg"
+            preload="none"
+            aria-label="Dance performance reel"
+          >
+            <source src="your-video.mp4" type="video/mp4" />
+            Your browser does not support HTML5 video.
+          </video>
+          <span class="media-slot__caption mono">Hip Hop / Aerial Reel</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Dance copy -->
+    <div class="beyond__dance">
+      <h3 class="beyond__dance-label mono">Currently</h3>
+      <p class="beyond__dance-text">
+        I train in <strong>aerial arts</strong> and <strong>hip hop dance</strong>, two disciplines
+        that demand body awareness, creative expression, and the courage to try things that will
+        not work the first time. Both have made me a better engineer: more patient, more creative,
+        and more committed to the process over the outcome.
+      </p>
+    </div>
+
+    <!-- Community cards -->
+    <div class="beyond__community">
+      <h3 class="beyond__community-heading">Community &amp; Advocacy</h3>
+      <div class="community-cards">
+
+        <div class="community-card community-card--pink">
+          <span class="community-card__tag mono">Leadership Role</span>
+          <h4>Women in IT</h4>
+          <p>
+            Programming Co-Lead. I design and drive programming that creates space for women in
+            technology to grow, connect, and lead. Not just attending — building the table.
+          </p>
+        </div>
+
+        <div class="community-card community-card--blue">
+          <span class="community-card__tag mono">Active Member</span>
+          <h4>African American Network</h4>
+          <p>
+            Committed to fostering an inclusive, equitable workplace. I show up consistently, not
+            just when it is visible.
+          </p>
+        </div>
+
+        <div class="community-card community-card--yellow">
+          <span class="community-card__tag mono">Fitness Community</span>
+          <h4>Company Fitness Group</h4>
+          <p>
+            Discipline outside work strengthens everything inside it. Athlete by training, always.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- ============================================================
+       EXPERIENCE — impact-based bullets, minimal
+  ============================================================ -->
+  <section class="section experience" id="experience">
+    <div class="section__label mono">06 / EXPERIENCE</div>
+    <h2 class="section__heading">Where I've<br /><em>made a dent.</em></h2>
+
+    <div class="experience__list">
+
+      <div class="exp-item">
+        <div class="exp-item__left">
+          <span class="exp-item__date mono">2024 / Present</span>
+          <span class="exp-item__company">Enterprise Tech Company</span>
+          <span class="exp-item__role mono">Android Mobile Developer</span>
+        </div>
+        <ul class="exp-item__bullets">
+          <li>Drove a <strong>261% increase in user engagement</strong> over 6 months through feature delivery and data-informed iteration.</li>
+          <li>Maintained <strong>94.6% crash-free sessions</strong> across 10+ production releases with rigorous QA and regression testing.</li>
+          <li>Shipped 50+ tickets spanning features, bugs, UI/UX, and localization, consistently meeting sprint commitments.</li>
+          <li>Led international Android launch in Canada with full French support; designed lite localization strategy for Mexico, Brazil, and LATAM.</li>
+          <li>Tracked <strong>24,000+ monthly user engagements</strong> via Firebase Analytics, improving observability and data-driven decision-making.</li>
+          <li>Completed React Native specialization (~192 hrs) while working full-time; enrolled in Business Analysis coursework at Kent State University.</li>
+          <li>Serving as <strong>Programming Co-Lead for Women in IT</strong> and active member of the African American Network.</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-item__left">
+          <span class="exp-item__date mono">2023 / 2024</span>
+          <span class="exp-item__company">University Project — Fort Wayne</span>
+          <span class="exp-item__role mono">Front-End Software Engineer</span>
+        </div>
+        <ul class="exp-item__bullets">
+          <li>Built a collaborative web application with HTML, CSS, and JavaScript achieving <strong>90%+ cross-device compatibility</strong>.</li>
+          <li>Debugged 100+ critical issues in GitHub, improving app stability and user experience across all mobile devices.</li>
+          <li>Led 3 live demos using React.js to project sponsors, coordinating delivery through Agile sprints and stakeholder feedback loops.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Education strip -->
+    <div class="education-strip">
+      <div class="education-strip__item">
+        <span class="edu-label mono">Education</span>
+        <strong>B.S. Computer Science</strong>
+        <span class="mono">2024</span>
+      </div>
+      <div class="education-strip__item">
+        <span class="edu-label mono">Continuing Ed</span>
+        <strong>React Native Specialization — Coursera</strong>
+        <span class="mono">~192 hrs · 8-course series</span>
+      </div>
+      <div class="education-strip__item">
+        <span class="edu-label mono">Continuing Ed</span>
+        <strong>Business Analysis + Intermediate JS — Kent State</strong>
+        <span class="mono">20.5 course hours</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       CONTACT — email, LinkedIn, GitHub
+  ============================================================ -->
+  <section class="section contact" id="contact">
+    <div class="section__label mono">07 / CONTACT</div>
+
+    <div class="contact__inner">
+      <h2 class="contact__heading">
+        Let's build<br />
+        <em>something worth using.</em>
+      </h2>
+      <p class="contact__sub">
+        I'm open to product, data, or mobile engineering roles and conversations that sit at the
+        intersection of all three. Reach out.
+      </p>
+
+      <div class="contact__links">
+        <a href="mailto:your@email.com" class="contact__link">
+          <span class="contact__link-icon" aria-hidden="true">@</span>
+          <span>your@email.com</span>
+        </a>
+        <a href="https://linkedin.com/in/yourprofile" class="contact__link" target="_blank" rel="noopener">
+          <span class="contact__link-icon" aria-hidden="true">in</span>
+          <span>linkedin.com/in/yourprofile</span>
+        </a>
+        <a href="https://github.com/yourusername" class="contact__link" target="_blank" rel="noopener">
+          <span class="contact__link-icon" aria-hidden="true">gh</span>
+          <span>github.com/yourusername</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="contact__bg-text" aria-hidden="true">HIRE ME</div>
+  </section>
+
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer">
+    <span class="mono">Designed &amp; built with intention.</span>
+    <span class="mono">2025</span>
+  </footer>
+
+
+  <!-- ============================================================
+       JS — nav scroll behavior + mobile menu + scroll-reveal
+  ============================================================ -->
+  <script>
+    // Sticky nav: add scrolled class + background when user scrolls past 50px
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('nav--scrolled', window.scrollY > 50);
+    });
+
+    // Mobile menu toggle
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('mobile-menu--open');
+    }
+
+    // Intersection Observer: fade-in elements as they enter the viewport
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target); // fire once, then stop watching
+        }
+      });
+    }, { threshold: 0.1 });
+
+    // Apply observer to all animated elements
+    document.querySelectorAll(
+      '.project-card, .exp-item, .skill-group, .about__heading, .about__copy, .media-slot, .community-card'
+    ).forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
